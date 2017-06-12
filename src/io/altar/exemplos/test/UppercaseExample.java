@@ -1,10 +1,16 @@
 package io.altar.exemplos.test;
 
-public class Test {
+public class UppercaseExample {
+
+	/*
+	 método que recebe omo parametro uma string constituida por palavras separadas pelo caracter espaço,
+	 e que capitalize a primeira letra de todas as palavras 
+	 */
 	public static void main(String [] args){
 		String a = "ola eu sou toto";
 		System.out.println(exec2(a));
 	}
+	
 	public static String exec2(String a){
 		String b = "";
 		
@@ -21,3 +27,5 @@ public class Test {
 		return(b);
 	}
 }
+
+
