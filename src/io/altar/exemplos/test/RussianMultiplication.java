@@ -36,6 +36,7 @@ public class RussianMultiplication {
 			System.out.println(y);
 		}
 		
+		//o while só acaba quando y=1
 		while(y >= 1){
 			//System.out.println(x);
 			//se o y for par, o x multiplica por 2 e o y divide por 2, mas o x nao conta para a soma final
