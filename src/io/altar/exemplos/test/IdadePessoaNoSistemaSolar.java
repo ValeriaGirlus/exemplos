@@ -20,7 +20,7 @@ public class IdadePessoaNoSistemaSolar {
 		int a = 0;
 		while(true) {
 			try{
-				System.out.println("Insira a sua idade");
+				System.out.println("Insira a sua idade em segundos");
 				input = s.nextLine();
 				a = Integer.parseInt(input);
 				System.out.println(agecalc(a));
