@@ -2,6 +2,7 @@ package io.altar.exemplos.test;
 
 import java.util.Locale;
 import java.util.Scanner;
+import java.sql.Date;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -21,28 +22,34 @@ public class DomingosEmFesta {
 	
 	public static void main(String [] args){
 		Scanner s = new Scanner(System.in);
-		String input = "";
-		
-		while(true){
+		String input = "2017-06-06";
+		int i = 0;
+		LocalDate date = null;
+		while(i == 0){
 			try {
 				System.out.println("Insira a data que pretende para a festa");
-				input = s.nextLine();
-			    DateTimeFormatter formatter =
-			                      DateTimeFormatter.ofPattern("yyyy-MM-dd");
-			    LocalDate date = LocalDate.parse(input, formatter);
+				//input = s.nextLine();
+			    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			    date = LocalDate.parse(input, formatter);
 			    System.out.printf("%s%n", date);
 			    s.close();
-			    //break;
+			    i = 1;
 			}
 			catch (DateTimeParseException exc) {
 			    System.out.printf("A data que introduziu não tem o formato correcto. Introduza a data no formato yyyy-MM-dd");
-			    
+			   
 			}
-		LocalDate data = LocalDate.now(); 
-		System.out.println("A data que introduziu corresponde a " + data.getDayOfWeek().getDisplayName(TextStyle.FULL ,new Locale("pt", "PT")));
+		}
+	    DayOfWeek diaSemana  = date.getDayOfWeek();
+	    String nomeDiaSemana = diaSemana.getDisplayName(TextStyle.FULL ,new Locale("pt", "PT"));
+	    
+	    System.out.println("A data que introduziu corresponde a " + nomeDiaSemana);
+	    if(nomeDiaSemana != "Domingo"){
+	    	
+	    	System.out.println(diaSemana.getValue());
+	    }
 		
-		
-		
-		}	
+	
 	}
+	
 }
