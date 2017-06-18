@@ -9,8 +9,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.TextStyle;
 
-
-
 public class DomingosEmFesta {
 
 	/*
@@ -40,16 +38,16 @@ public class DomingosEmFesta {
 			   
 			}
 		}
+		
 	    DayOfWeek diaSemana  = date.getDayOfWeek();
 	    String nomeDiaSemana = diaSemana.getDisplayName(TextStyle.FULL ,new Locale("pt", "PT"));
 	    
 	    System.out.println("A data que introduziu corresponde a " + nomeDiaSemana);
+	   
 	    if(nomeDiaSemana != "Domingo"){
-	    	
-	    	System.out.println(diaSemana.getValue());
+	    	System.out.println("A festa só pode ser marcada para um dia de Domingo ");
+	    	int daysUntilSunday = 7 - diaSemana.getValue();
+	    	System.out.println("Podemos sugerir que marque para o dia " + date.plusDays(daysUntilSunday).toString());
 	    }
-		
-	
 	}
-	
 }
