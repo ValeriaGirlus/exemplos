@@ -20,13 +20,13 @@ public class DomingosEmFesta {
 	
 	public static void main(String [] args){
 		Scanner s = new Scanner(System.in);
-		String input = "2017-06-06";
+		String input = "";
 		int i = 0;
 		LocalDate date = null;
 		while(i == 0){
 			try {
 				System.out.println("Insira a data que pretende para a festa");
-				//input = s.nextLine();
+				input = s.nextLine();
 			    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 			    date = LocalDate.parse(input, formatter);
 			    System.out.printf("%s%n", date);
