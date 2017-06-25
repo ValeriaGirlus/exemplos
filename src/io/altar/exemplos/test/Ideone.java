@@ -1,36 +1,31 @@
 package io.altar.exemplos.test;
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-
 public class Ideone {
-		
+	
 	public static void main (String[] args) throws java.lang.Exception 
 	{
-//		Scanner s = new Scanner(System.in);
-//		String a  = "aaabbbccc";
-//		String input = null;
-//		
-//		System.out.println("suggest name");
-//		input = s.nextLine();
-		
-		String input  = "aaabbbcc";
-		LinkedHashMap<String, Integer> characternumber = new LinkedHashMap<>();
-		
+		Scanner s = new Scanner(System.in);
+		String input = s.nextLine();		
+		LinkedHashMap<Character, Integer> characterNumber = new LinkedHashMap <>();
 		for(int i = 0, n = input.length(); i < n; i++ ){
-			
-			if(characternumber.containsKey(input.charAt(i))){
-				Integer value = 
-				
+			if(characterNumber.containsKey(input.charAt(i))){
+				characterNumber.put(input.charAt(i), characterNumber.get(input.charAt(i)) + 1 );
+			}else{
+				characterNumber.put(input.charAt(i), 1);	
 			}
 		}
-		
-		
-//		if(input.matches(a)){
-//			System.out.println("Like");
-//		}else {
-//			System.out.println("Unlike");
-//		}	
+		String tempString = "";
+		for(Character k : characterNumber.keySet()) {
+			for(int n = 0; n < characterNumber.get(k); n++){
+				tempString+=k;
+			}
+		}
+		if(characterNumber.size() == 3 && tempString.equals(input)){
+			System.out.println("Like");
+		}else {
+			System.out.println("Unlike");
+		}	
 	}
 }	
