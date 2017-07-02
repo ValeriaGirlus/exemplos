@@ -12,7 +12,6 @@ public class IdadePessoaNoSistemaSolar {
 	
 	private static final int  earthYearInSeconds = 365 * 24 * 60 * 60;
 	
-
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner(System.in);
@@ -27,7 +26,7 @@ public class IdadePessoaNoSistemaSolar {
 				s.close();
 				break;
 			}catch(NumberFormatException e){
-				System.out.println("Introduza um numero");
+				System.out.println("Introduza um número");
 			}
 		}
 	}
@@ -48,9 +47,7 @@ public class IdadePessoaNoSistemaSolar {
 		for(String key : agePlanets.keySet()) {
 			ageInPlanets.put(key, (ageInSeconds / agePlanets.get(key)) / earthYearInSeconds);
 		}
-
-
+		
 		return ageInPlanets;
 	}
-	
 }

@@ -34,7 +34,7 @@ public class DomingosEmFesta {
 			    i = 1;
 			}
 			catch (DateTimeParseException exc) {
-			    System.out.printf("A data que introduziu não tem o formato correcto. Introduza a data no formato yyyy-MM-dd");
+			    System.out.printf("A data que introduziu não tem o formato correcto. Introduza a data no formato ano-mês-dia");
 			   
 			}
 		}
