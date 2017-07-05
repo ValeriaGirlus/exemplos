@@ -10,7 +10,7 @@ public class Palíndromo {
 		Scanner s = new Scanner(System.in);
 		String input = null;
 		String a = "";
-		
+		s.close();
 		
 		while(true) {
 			try{

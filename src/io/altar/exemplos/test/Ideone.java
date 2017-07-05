@@ -9,7 +9,7 @@ public class Ideone {
 		System.out.println("Suggest a name to see if John likes for his bike");
 		Scanner s = new Scanner(System.in);
 		String input = s.nextLine();
-		
+		s.close();
 		LinkedHashMap<Character, Integer> characterNumber = new LinkedHashMap <>();
 		
 		for(int i = 0, n = input.length(); i < n; i++ ){
